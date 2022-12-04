@@ -7,34 +7,35 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
 
-const MenuAtas = (props) => {
-    const [collapsed, setCollapsed] = useState(true);
-  
-    const toggleNavbar = () => setCollapsed(!collapsed);
-  
-    return (
-      <div>
-        <Navbar color="black" dark>
-          <NavbarBrand href="/" className="me-auto">
-            Home
-          </NavbarBrand>
-          <NavbarToggler onClick={toggleNavbar} className="me-2" />
-          <Collapse isOpen={!collapsed} navbar>
-            <Nav navbar>
-              <NavItem>
-                <Link to="/detailmobil">CarDetail</Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/mobilterbaru">NewCar</Link>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-    );
-  }
+function MenuAtas(args) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Navbar {...args}>
+        <NavbarBrand href="/">Binar</NavbarBrand>
+        <div className='navtext'>
+              <NavbarText >Our Services</NavbarText>
+              <span></span>
+              <NavbarText >Why Us</NavbarText>
+              <span></span>
+              <NavbarText >Testimonial</NavbarText>
+              <span></span>
+              <NavbarText >FAQ</NavbarText>
+        </div>
+      </Navbar>
+    </div>
+  );
+}
   
   export default MenuAtas;

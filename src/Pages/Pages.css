@@ -1,0 +1,27 @@
+.carCard {
+    width: 383px;
+    margin: 20px;
+}
+
+.containerImg img {
+    width: 100%;
+}
+
+.bungkusLemper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homepage1 {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.homepage1 span {
+    height: 100px;
+}
+
+.navtext span{
+    padding: 10px;
+}

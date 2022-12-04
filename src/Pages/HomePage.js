@@ -1,14 +1,33 @@
 import'bootstrap/dist/css/bootstrap.min.css';
+import Landing from '../Components/Landing';
+import Landing2 from '../Components/Landing2';
 import MenuAtas from '../Components/NavBar';
-const HomePage = () => {
+import Testimonial from '../Components/Testimonial';
+import WhyUs from '../Components/WhyUs';
+import BlueBox from '../Components/BlueBox';
+import Footer from '../Components/Footer';
+import Faq from '../Components/Faq';
+import "./Pages.css"
+
+const HomePage = (props) => {
     return (
-    <div>
+    <div className='homepage1'>
         <MenuAtas />
-        <h1>
-            Ini Home Page
-        </h1>
+        <Landing isBtnShow={true}/>
+        <span></span>
+        <Landing2 />
+        <span></span>
+        <WhyUs />
+        <span></span>
+        <Testimonial/>
+        <span></span>
+        <BlueBox/>
+        <span></span>
+        <Faq/>
+        <span></span>
+        <Footer/>
+        <span></span>
     </div>
     )
 }
-
 export default HomePage ;

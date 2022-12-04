@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './Pages/HomePage';
-import NewCar from './Pages/NewCar';
+import SearchCar from './Pages/SearchCar';
 import CarDetail from './Pages/CarDetail';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path = "/" element ={<HomePage/>} />
-        <Route path = "/detailmobil" element ={<CarDetail/>} />
-        <Route path = "/mobilterbaru" element ={<NewCar/>} />
+        <Route path = "/carimobil" element ={<SearchCar/>} />
+        <Route path = "/detailmobil/" element ={<CarDetail/>} />
       </Routes>
     </BrowserRouter>
   ) 
