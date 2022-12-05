@@ -1,5 +1,32 @@
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+  
 .carCard {
-    width: 383px;
+    width: 333px;
+    height: 478px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    width: 333px;
+    height: 478px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -84,7 +111,6 @@ box-sizing: border-box;
 display: flex;
 flex-direction: row;
 justify-content: center;
-align-items: center;
 padding: 8px 12px;
 gap: 10px;
 position: absolute;
@@ -140,7 +166,11 @@ border-radius: 2px;
     top: 604px;
 }
 
-
+.binar2B  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .binar2B h3 {
     width: 468px;
     height: 72px;
@@ -188,13 +218,19 @@ border-radius: 2px;
     height: 400px;
 }
 .binar3container {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1168px;
-    height: 308px;
+    align-items: center;
     left: 136px;
     top: 1132px;
+}
+
+.binar3text {
+    width: 1300px;
+    margin-bottom: 50px;
 }
 .binar3card {
     display: flex;
@@ -212,8 +248,8 @@ border-radius: 2px;
     align-items: flex-start;
     padding: 24px;
     gap: 16px;
-    width: 268px;
-    height: 250px;
+    width: 300px;
+    height: 280px;
     border: 1px solid #D0D0D0;
     border-radius: 8px;
     flex: none;
@@ -222,79 +258,52 @@ border-radius: 2px;
 
 }
 
-.binar3card2 {
-    box-sizing: border-box;
+.tBase {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 16px;
-    width: 268px;
-    height: 196px;
-    border: 1px solid #D0D0D0;
-    border-radius: 8px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
+    justify-content: center;
+    align-items: center;
 }
 
-.binar3card3 {
-    box-sizing: border-box;
+.tTbox {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 16px;
-    width: 268px;
-    height: 196px;
-    border: 1px solid #D0D0D0;
-    border-radius: 8px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
-
-.binar3card4 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 16px;
-    width: 268px;
-    height: 196px;
-    border: 1px solid #D0D0D0;
-    border-radius: 8px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
 .container {
     width: 100%;
-    height: 270px;
-    left: 410px;
-    top: 1652px;
+    height: 340px;
     display: flex;
-
-    
+    flex-direction: row;
+    margin: 0px 0px 0px 0px;
     }
 
 .containerCol {
+    width: 500px;
+    height: 340px;
     display: flex;
-    position: absolute;
-    flex-direction: row;
-    justify-content: center;
-    background: #F1F3FF;
+    flex-direction: column;
+    background-color: #F1F3FF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    width: 100%;
-    height: 100%;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
+.photoframe {
+    width: 80px;
+    height: 80px;
+    
+}
+
+.photoframe img {
+    width: 100%;
+    height: 100%;
+    
+}
 .blue {
     width: 100%;
     display: flex;
@@ -346,7 +355,6 @@ border-radius: 2px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     padding: 8px 12px;
     gap: 10px;
     width: 140px;
@@ -379,6 +387,10 @@ border-radius: 2px;
     background: #FFFFFF;
     border: 1px solid #D4D4D4;
     border-radius: 4px;
+    margin-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .faqcont {
@@ -434,6 +446,7 @@ border-radius: 2px;
     flex-grow: 0;
 }
 
+
 .filter input {
     box-sizing: border-box;
     display: flex;
@@ -473,7 +486,6 @@ border-radius: 2px;
 .filterButton {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 92px;
     height: 36px;
     background: #5CB85F;
@@ -485,7 +497,8 @@ border-radius: 2px;
 }
 
 .footerBase {
-    margin-top: 500px;
+    margin-top: 300px;
+    margin-bottom: 200px;
 }
 
 .cardView {
@@ -500,8 +513,6 @@ border-radius: 2px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     flex: none;
-    order: 2;
-    flex-grow: 1;
 }
 
 .cardView button {
@@ -525,5 +536,23 @@ border-radius: 2px;
 .buttonCont {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
+.buttonCont button{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8px 12px;
+    gap: 12px;
+    width: 285px;
+    height: 48px;
+    background: #5CB85F;
+    border-radius: 2px;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-top: 20px;
+    }
+    

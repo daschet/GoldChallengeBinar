@@ -4,7 +4,7 @@ import iconB from "./Assets/icon_instagram.png"
 import iconC from "./Assets/icon_twitter.png"
 import iconD from "./Assets/icon_mail.png"
 import iconE from "./Assets/icon_twitch.png"
-
+import { NavbarBrand } from 'reactstrap';
 const Footer = () => {
     return (
         <div className='footerBase'>
@@ -32,6 +32,8 @@ const Footer = () => {
                 </div>
                 <div className='copyright'>
                 <h5>Copyright Binar 2022</h5>
+                <NavbarBrand href="/">BINAR</NavbarBrand>
+                <div className='navtext'></div>
                 </div>
             </div>
         </div>

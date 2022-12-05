@@ -25,3 +25,82 @@
 .navtext span{
     padding: 10px;
 }
+
+.flavor {
+    width: 100%;
+    height: 266px;
+    left: 0px;
+    top: 0px;
+    background: #F1F3FF;
+
+}
+
+.base {
+    height: 2000px;
+    display: flex;
+    flex-direction: column;
+}
+.wrapBase {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.detailWrap {
+    display:flex;
+    justify-content: space-evenly; 
+    width: 1500px;
+    margin-top: 100px;
+    
+}
+.gambar {
+    width: 270px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gambar img {
+    width: 100%;
+}
+.wallOfText {
+width: 605px;
+height: 618px;
+left: 199px;
+top: 368px;
+background: #FFFFFF;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+border-radius: 8px;
+padding: 20px;
+}
+
+.cardDetail {
+    width: 405px;
+    height: 435px;
+    left: 836px;
+    top: 368px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}

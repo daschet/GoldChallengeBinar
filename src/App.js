@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import HomePage from './Pages/HomePage';
 import SearchCar from './Pages/SearchCar';
@@ -11,7 +10,7 @@ function App() {
       <Routes>
         <Route path = "/" element ={<HomePage/>} />
         <Route path = "/carimobil" element ={<SearchCar/>} />
-        <Route path = "/detailmobil/" element ={<CarDetail/>} />
+        <Route path = "/detailmobil/:id" element ={<CarDetail/>} />
       </Routes>
     </BrowserRouter>
   ) 

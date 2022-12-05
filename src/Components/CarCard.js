@@ -7,7 +7,6 @@ const CarCard = (props) => {
         {!!props.mobil.length ? (
           props.mobil.map((item) => {
             return (
-              <div className="cardView">
                 <div className="carCard">
                   <div className="containerImg">
                     <img src={item.image} />
@@ -20,18 +19,18 @@ const CarCard = (props) => {
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.{" "}
                   </h5>
+                  <span> </span>
                   <div className="buttonCont">
-                    <Link to={`/mobilterbaru/${item.id}`}>
+                    <Link to={`/detailmobil/${item.id}`}>
                       <button> Cari Mobil </button>
                     </Link>
                   </div>
                 </div>
                 </div>
-              </div>
             );
           })
         ) : (
-          <p>gagal</p>
+          <h3>Loading</h3>
         )}
       </div>
     </div>

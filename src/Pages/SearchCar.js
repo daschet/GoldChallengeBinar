@@ -1,13 +1,12 @@
 import MenuAtas from "../Components/NavBar";
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Landing from "../Components/Landing";
 import Filter from "../Components/Filter";
 import Footer from "../Components/Footer";
 import CarCard from "../Components/CarCard";
 import axios from "axios";
+
 const SearchCar = (props) => {
-  const { id } = useParams();
   const [car, setCar] = useState([]);
 
   useEffect(() => {
@@ -22,7 +21,7 @@ const SearchCar = (props) => {
   const handleFilter = (e) => {
     axios
       .get(
-        `https://bootcamp-rent-cars.herokuapp.com/customer/v2/car?name=${carName}&category=${category}&isRented=${stat}&minPrice=${min}&maxPrice=${max}`
+        `https://bootcamp-rent-cars.herokuapp.com/customer/v2/car?name=${carName}&category=${category}&&isRented=${stat}}&minPrice=${min}&maxPrice=${max}`
       )
       .then((res) => {
         setCar(res.data.cars);

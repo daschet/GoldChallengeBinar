@@ -24,32 +24,29 @@ const Filter = (props) => {
                         >
                         <option value={``}>--</option>
                         <option value={`small`}>1-4 Orang</option>
-                        <option value={`medium`}>1-6 Orang</option>
+                        <option value={`Medium`}>1-6 Orang</option>
                         <option value={`large`}>1-8 Orang</option>
                         </Input>
                     </div>
                     </div>
                     
                     <div className="filter">
-                        <p>Harga</p>
+                    <p>Harga Minimal</p>
                         <input
                             bsSize="sm"
                             type="select"
-                            className={props.maxPrice}
-                            placeholder={`Maximum Price`}
+                            onChange={props.minPrice}
+                            placeholder ={`Minimum Price`}
                         />
-                        <option>
-
-                        </option>
                     </div>
                     
                     <div className="filter">
-                    <p> </p>
+                        <p>Harga Maksimal</p>
                         <input
                             bsSize="sm"
                             type="select"
-                            className ={props.minPrice}
-                            placeholder ={`Minimum Price`}
+                            onChange={props.maxPrice}
+                            placeholder={`Maximum Price`}
                         />
                     </div>
 
@@ -61,8 +58,9 @@ const Filter = (props) => {
                             onChange={props.categoryStatus}
                             placeholder = {`Input Status`}
                         >
-                        <option value={true}>Disewakan</option>
-                        <option value={false}>Tersedia</option>
+                        <option value={``}>--</option>
+                        <option value={true}>Tersedia</option>
+                        <option value={false}>Tidak Tersedia</option>
                         </Input>
                     </div>
                     

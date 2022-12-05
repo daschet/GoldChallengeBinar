@@ -4,28 +4,32 @@ import MenuAtas from '../Components/NavBar';
 import Filter from '../Components/Filter';
 import axios from "axios"
 import "./Pages.css"
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Footer from '../Components/Footer';
-
-const CarDetail = () => {
-    const [carData, setCardata] = useState({})
+const CarDetail = (props) => {
+    const [carData, setCardata] = useState([])
+    
+    
+    const {id} = useParams()
 
     useEffect (() => {
         axios
-        .get("https://bootcamp-rent-cars.herokuapp.com/customer/v2/car")
+        .get(`https://bootcamp-rent-cars.herokuapp.com/customer/car/${id}`)
         .then((res) => {
             console.log(res)
-            setCardata(res.data.cars)
+            setCardata(res.data)
         })
         .catch((err)=> console.log(err.message))
     }, [])
 
+   
     return (
-    <div>
+    <div className='base'>
         <MenuAtas/>
         <div className='flavor'>
         </div>
         <Filter/>
+        <div className='wrapBase'>
         <div className='detailWrap'>
             <div className='wallOfText'>
                 <h5>Tentang Paket</h5>
@@ -50,32 +54,28 @@ const CarDetail = () => {
                     <li>Tidak termasuk akomodasi penginapan</li>
             </div>
             <div>
-                <img src=''/>
-                <h5></h5>
-                <p></p>
-                <div>
-                    <h5></h5>
-                    <h5></h5>
+            {Object.entries(carData).length ? (
+            <div className='cardDetail'>
+                <div className='gambar'>
+                <img src={carData.image}/>
                 </div>
-            </div>
-            </div>
-        {/* {Object.entries(car).length ? (
-            <div>
-                <img src={car.image}/>
-                <h1>{car.name}</h1>
-                <p>{car.price}</p>
+                <div className='text1'>
+                <h4>{carData.name}</h4>
+                <p>{carData.category}</p>
+                </div>
+                <div className='text2'>
+                <h5>Total</h5>
+                <h5>Rp. {carData.price}</h5>
+                </div>
             </div>
          ) : (
             null
         )}
+            </div>
         <span></span>
-        <Footer/> */}
-        </div> 
-
-        
-    
-    )
-}
-
-
+        </div>
+        </div>
+        <Footer/>
+    </div>
+    )}
 export default CarDetail ;
