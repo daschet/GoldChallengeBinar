@@ -6,6 +6,8 @@ import axios from "axios"
 import "./Pages.css"
 import { Link, useParams } from 'react-router-dom';
 import Footer from '../Components/Footer';
+
+
 const CarDetail = (props) => {
     const [carData, setCardata] = useState([])
     
